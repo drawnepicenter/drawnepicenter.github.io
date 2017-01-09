@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title><![CDATA[Test]]></title>
-      <url>https://drawnepicenter.github.io/2017/01/09/hello-world/</url>
-      <content type="html"><![CDATA[<h1 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h1><p>This is a test blog post.</p>
+      <title><![CDATA[Introduction]]></title>
+      <url>https://drawnepicenter.github.io/2017/01/09/introduction/</url>
+      <content type="html"><![CDATA[<p>Welcome to my blog! I’ve been meaning to create a developer diary for some time now, so I’m giving <a href="http://hexo.io" target="_blank" rel="external">Hexo</a> a try. Enjoy.</p>
 ]]></content>
     </entry>
     

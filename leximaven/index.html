@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="leximavenIntroductionLeximaven is a powerful tool for searching word-related APIs from the command line. It can fetch acronyms, anagrams, bi-gram phrases, definitions, etymologies, example uses, hyphe">
+<meta property="og:type" content="website">
+<meta property="og:title" content="leximaven">
+<meta property="og:url" content="https://drawnepicenter.github.io/leximaven/index.html">
+<meta property="og:site_name" content="drawn|epic|enter">
+<meta property="og:description" content="leximavenIntroductionLeximaven is a powerful tool for searching word-related APIs from the command line. It can fetch acronyms, anagrams, bi-gram phrases, definitions, etymologies, example uses, hyphe">
+<meta property="og:updated_time" content="2017-01-09T05:37:04.084Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="leximaven">
+<meta name="twitter:description" content="leximavenIntroductionLeximaven is a powerful tool for searching word-related APIs from the command line. It can fetch acronyms, anagrams, bi-gram phrases, definitions, etymologies, example uses, hyphe">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>leximaven</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/atom.xml" title="drawn|epic|enter" type="application/atom+xml" />
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    
+    <div class="content index width mx-auto px2 my4">
+        
+          <header id="header">
+  <a href="/">
+  
+    
+      <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/80db990e344a0df987e5a6055328f039);"></div>
+    
+  
+    <div id="title">
+      <h1>drawn|epic|enter</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fa fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">home</a></li>
+       
+        <li><a href="/iloa/">iloa</a></li>
+       
+        <li><a href="/leximaven/">leximaven</a></li>
+       
+        <li><a href="/toloko/">toloko</a></li>
+       
+        <li><a href="/about/">about</a></li>
+       
+        <li><a href="/archives/">weblog</a></li>
+       
+        <li><a href="https://github.com/drawnepicenter">projects</a></li>
+      
+    </ul>
+  </div>
+</header>
+
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="leximaven"><a href="#leximaven" class="headerlink" title="leximaven"></a>leximaven</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Leximaven is a powerful tool for searching word-related APIs from the command line. It can fetch acronyms, anagrams, bi-gram phrases, definitions, etymologies, example uses, hyphenation, offensive word flags, portmanteaus, pronunciations (Arpabet &amp; IPA), related words, rhymes, slang, syllable stress and count, and more. See the <a href="https://github.com/drawnepicenter/leximaven/wiki" target="_blank" rel="external">wiki</a> for more info. Leximaven goes great with <a href="https://github.com/drawnepicenter/iloa" target="_blank" rel="external">iloa</a>.</p>
+<h2 id="Platform"><a href="#Platform" class="headerlink" title="Platform"></a>Platform</h2><p>I use leximaven on Linux, I have no Mac to test on. Windows testing is planned. Tested on Node:</p>
+<ul>
+<li>4.x</li>
+<li>5.x</li>
+<li>6.x</li>
+<li>7.x</li>
+</ul>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>To initialize the config file and load themes, your NODE_PATH environment variable must point to the <strong>lib/node_modules</strong> directory of the Node.js installation. You can set this path automatically like this:</p>
+<pre><code>export NP=$(which node)
+export BP=${NP%bin/node} #this replaces the string &apos;/bin/node&apos;
+export LP=&quot;${BP}lib/node_modules&quot;
+export NODE_PATH=&quot;$LP&quot;
+</code></pre><p>This should work for a system installation of Node.js and <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>. You’ll also need to get a <a href="http://developer.wordnik.com/" target="_blank" rel="external">Wordnik API key</a> and put it in an environment variable WORDNIK. Add all of this to .bashrc, .zshrc, etc.<br>Then run:</p>
+<pre><code>npm install -g leximaven
+leximaven config init
+</code></pre><h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>Leximaven has a built-in help system for CLI parameters and options. Access it with <code>leximaven -h|--help [command] [subcommand]</code>. There is also the <a href="https://github.com/drawnepicenter/leximaven/wiki" target="_blank" rel="external">wiki</a>.</p>
+<p>Here are some examples:</p>
+<pre><code>// Get definitions for &apos;catharsis&apos;
+leximaven wordnik define catharsis
+
+// Get antonyms for &apos;noise&apos;
+leximaven wordnik relate --canon --type antonym noises
+
+// Pronounce &apos;quixotic&apos;
+leximaven wordnik pronounce quixotic
+
+// Get etymology for &apos;special&apos;
+leximaven wordnik origin special
+
+// Get words that sound like &apos;blue&apos;
+leximaven dmuse get sl=blue
+
+// Get slang/colloquialisms for &apos;diesel&apos;
+leximaven urban diesel
+
+// Get anagrams with at least 2 letters in each word and a maximum of 3 words
+// per anagram using short form flags and exporting to JSON
+leximaven anagram -n2 -w3 -o anagrams.json toomanysecrets
+
+// Get a wordmap for &apos;ubiquity&apos;
+leximaven map ubiquity
+</code></pre><p>See the <a href="https://github.com/drawnepicenter/leximaven/blob/master/test/test.es6" target="_blank" rel="external">tests</a> for more.</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><p>The following links can help you use Leximaven or perform related tasks.</p>
+<ul>
+<li><a href="https://github.com/wooorm/alex" target="_blank" rel="external">alex</a> Checks your writing for words or phrasings that might offend someone</li>
+<li><a href="https://github.com/amperser/proselint" target="_blank" rel="external">proselint</a> checks your writing style and has plugins for multiple editors</li>
+<li><a href="https://github.com/wooorm/retext" target="_blank" rel="external">retext</a> is a framework for natural language processing</li>
+<li><a href="https://github.com/btford/write-good" target="_blank" rel="external">write-good</a> Naive linter for English prose for developers who can’t write good and wanna learn to do other stuff good too</li>
+<li>ISO 639-1 <a href="http://www.loc.gov/standards/iso639-2/php/English_list.php" target="_blank" rel="external">Language Codes</a> for Rhymebrain functions</li>
+<li><a href="http://en.wikipedia.org/wiki/Arpabet" target="_blank" rel="external">Arpabet</a> phoneme list and <a href="http://en.wikipedia.org/wiki/Help:IPA_for_English" target="_blank" rel="external">IPA</a> equivalents</li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_Dewey_Decimal_classes" target="_blank" rel="external">Dewey Decimal Classes</a> for acronyms</li>
+<li>Browse Datamuse’s Onelook <a href="http://www.onelook.com/?d=all_gen" target="_blank" rel="external">dictionaries</a>, use its <a href="http://www.onelook.com/" target="_blank" rel="external">dictionary lookup</a>, <a href="http://www.onelook.com/thesaurus/" target="_blank" rel="external">thesaurus/reverse lookup</a>, and <a href="http://www.rhymezone.com/" target="_blank" rel="external">RhymeZone</a></li>
+</ul>
+<h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>See <a href="https://github.com/drawnepicenter/leximaven/blob/master/CONTRIBUTING.md" target="_blank" rel="external">CONTRIBUTING</a>.</p>
+<h2 id="Gratitude"><a href="#Gratitude" class="headerlink" title="Gratitude"></a>Gratitude</h2><p>Many thanks to all contributors to the libraries used in this project! And thanks to the creators and maintainers of the APIs that this tool consumes. Acronym Server, Datamuse, Onelook, Rhymebrain, Urban Dictionary, Wordnik, and Wordsmith are awesome!</p>
+<h2 id="Prose"><a href="#Prose" class="headerlink" title="Prose"></a>Prose</h2><p>For fun, read some of my <a href="https://github.com/drawnepicenter/prose#readme" target="_blank" rel="external">prose</a>…</p>
+
+  </div>
+</article>
+
+    </div>
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Andrew Prentice
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">home</a></li>
+         
+          <li><a href="/iloa/">iloa</a></li>
+         
+          <li><a href="/leximaven/">leximaven</a></li>
+         
+          <li><a href="/toloko/">toloko</a></li>
+         
+          <li><a href="/about/">about</a></li>
+         
+          <li><a href="/archives/">weblog</a></li>
+         
+          <li><a href="https://github.com/drawnepicenter">projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

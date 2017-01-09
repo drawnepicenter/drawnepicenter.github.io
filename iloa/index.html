@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="iloaIntroductioniloa is Samoan for knowing
+iloa is a powerful tool for gaining knowledge from the command line. It queries DuckDuckGo, Encyclopedia of Life, Weather Underground, Wikipedia, Wolfram|Alp">
+<meta property="og:type" content="website">
+<meta property="og:title" content="iloa">
+<meta property="og:url" content="https://drawnepicenter.github.io/iloa/index.html">
+<meta property="og:site_name" content="drawn|epic|enter">
+<meta property="og:description" content="iloaIntroductioniloa is Samoan for knowing
+iloa is a powerful tool for gaining knowledge from the command line. It queries DuckDuckGo, Encyclopedia of Life, Weather Underground, Wikipedia, Wolfram|Alp">
+<meta property="og:updated_time" content="2017-01-09T05:37:58.633Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iloa">
+<meta name="twitter:description" content="iloaIntroductioniloa is Samoan for knowing
+iloa is a powerful tool for gaining knowledge from the command line. It queries DuckDuckGo, Encyclopedia of Life, Weather Underground, Wikipedia, Wolfram|Alp">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>iloa</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/atom.xml" title="drawn|epic|enter" type="application/atom+xml" />
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    
+    <div class="content index width mx-auto px2 my4">
+        
+          <header id="header">
+  <a href="/">
+  
+    
+      <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/80db990e344a0df987e5a6055328f039);"></div>
+    
+  
+    <div id="title">
+      <h1>drawn|epic|enter</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fa fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">home</a></li>
+       
+        <li><a href="/iloa/">iloa</a></li>
+       
+        <li><a href="/leximaven/">leximaven</a></li>
+       
+        <li><a href="/toloko/">toloko</a></li>
+       
+        <li><a href="/about/">about</a></li>
+       
+        <li><a href="/archives/">weblog</a></li>
+       
+        <li><a href="https://github.com/drawnepicenter">projects</a></li>
+      
+    </ul>
+  </div>
+</header>
+
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="iloa"><a href="#iloa" class="headerlink" title="iloa"></a>iloa</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><em>iloa</em> is <a href="https://en.wikipedia.org/wiki/Samoan_language" target="_blank" rel="external">Samoan</a> for <strong>knowing</strong></p>
+<p>iloa is a powerful tool for gaining knowledge from the command line. It queries <a href="https://duckduckgo.com/api" target="_blank" rel="external">DuckDuckGo</a>, <a href="http://eol.org/" target="_blank" rel="external">Encyclopedia of Life</a>, <a href="https://www.wunderground.com/" target="_blank" rel="external">Weather Underground</a>, <a href="https://www.wikipedia.org" target="_blank" rel="external">Wikipedia</a>, <a href="https://www.wolframalpha.com/about.html" target="_blank" rel="external">Wolfram|Alpha</a>, and more through meta-searches. See the <a href="https://github.com/drawnepicenter/iloa/wiki" target="_blank" rel="external">wiki</a> for more info. iloa goes great with <a href="https://github.com/drawnepicenter/leximaven" target="_blank" rel="external">leximaven</a>.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>To initialize the config file and load themes, your NODE_PATH environment variable must point to the <strong>lib/node_modules</strong> directory of the Node.js installation. You can set this path automatically like this:</p>
+<pre><code>export NP=$(which node)
+export BP=${NP%bin/node} #this replaces the string &apos;/bin/node&apos;
+export LP=&quot;${BP}lib/node_modules&quot;
+export NODE_PATH=&quot;$LP&quot;
+</code></pre><p>Provided these lines are towards the end of the shell initialization file (at least after any NVM stuff) this should work for a system installation of Node.js and <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>.</p>
+<ul>
+<li>Put your <a href="http://eol.org/users/register" target="_blank" rel="external">EOL API key</a> from your EOL profile into an environment variable <strong>EOLKEY</strong></li>
+<li>Put your <a href="https://www.wunderground.com/member/registration" target="_blank" rel="external">Weather Underground API key</a> into an environment variable <strong>WUNDERGROUND</strong></li>
+<li>Put your <a href="http://developer.wolframalpha.com/portal/apisignup.html" target="_blank" rel="external">Wolfram|Alpha API key</a> into an environment variable <strong>WOLFRAM</strong></li>
+</ul>
+<p>Add all of this to .bashrc, .zshrc, Windows env, etc. then:</p>
+<pre><code>npm install -g iloa
+iloa config init
+</code></pre><h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>iloa has a built-in help system for CLI parameters and options. Access it with <code>iloa -h|--help [command] [subcommand]</code>. There is also the <a href="https://github.com/drawnepicenter/iloa/wiki" target="_blank" rel="external">wiki</a>.</p>
+<p>Here are some examples:</p>
+<pre><code>// Get DuckDuckGo instant answers for Infected Mushroom
+iloa ddg &apos;Infected Mushroom&apos;
+
+// Get Encyclopedia of Life pages for Homo sapiens
+iloa eol page 327955 -n -d -m -y -r -x
+
+// Get Weather Underground conditions and forecast for Tampa Knight Airport
+iloa wu -e conditions,forecast KTPF
+
+// Get Wolfram|Alpha computation of doppler shift
+iloa wa &apos;doppler shift&apos;
+
+// Get Wikipedia article for George Gurdjieff
+iloa wp &apos;George Gurdjieff&apos;
+</code></pre><p>See the <a href="https://github.com/drawnepicenter/iloa/blob/master/test/test.es6" target="_blank" rel="external">tests</a> for more.</p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><p>The following links can help you use iloa or perform related tasks.</p>
+<ul>
+<li><a href="http://www.wiksearch.com" target="_blank" rel="external">WikSearch</a> = <a href="http://www.datamuse.com/api/" target="_blank" rel="external">Datamuse</a> + <a href="https://www.wikipedia.org" target="_blank" rel="external">Wikipedia</a></li>
+<li><a href="http://www.nws.noaa.gov/os/vtec/pdfs/VTEC_explanation6.pdf" target="_blank" rel="external">VTEC Info</a>, <a href="http://www.wunderground.com/severe.asp" target="_blank" rel="external">US Severe Weather Map</a> &amp; <a href="http://www.wunderground.com/severe/europe.html" target="_blank" rel="external">Euro Severe Weather Map</a> for Wunderground alerts</li>
+</ul>
+<h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>See <a href="https://github.com/drawnepicenter/iloa/blob/master/CONTRIBUTING.md" target="_blank" rel="external">CONTRIBUTING</a>.</p>
+<h2 id="Gratitude"><a href="#Gratitude" class="headerlink" title="Gratitude"></a>Gratitude</h2><p>Many thanks to all contributors to the libraries used in this project! And thanks to the creators and maintainers of the APIs that this tool consumes. DuckDuckGo, Encyclopedia of Life, Weather Underground, Wikipedia, and Wolfram|Alpha are awesome!</p>
+
+  </div>
+</article>
+
+    </div>
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Andrew Prentice
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">home</a></li>
+         
+          <li><a href="/iloa/">iloa</a></li>
+         
+          <li><a href="/leximaven/">leximaven</a></li>
+         
+          <li><a href="/toloko/">toloko</a></li>
+         
+          <li><a href="/about/">about</a></li>
+         
+          <li><a href="/archives/">weblog</a></li>
+         
+          <li><a href="https://github.com/drawnepicenter">projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

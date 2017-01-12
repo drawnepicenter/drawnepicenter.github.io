@@ -322,7 +322,7 @@
   font-size: 1.5em;
   font-style: normal;
   font-weight: 700;
-  color: #2bbc8a;
+  color: #00e26f;
   margin-top: 3rem;
   margin-bottom: 1rem;
   display: block;
@@ -436,11 +436,11 @@
 }
 html {
   height: 100%;
-  border-top: 2px solid #c9cacc;
+  border-top: 2px solid #b0b1b5;
 }
 body {
-  color: #c9cacc;
-  background-color: #1d1f21;
+  color: #b0b1b5;
+  background-color: #2a2a2a;
   font-size: 14px;
   font-family: "Menlo", "Meslo LG", monospace;
   font-weight: 400;
@@ -470,20 +470,20 @@ body {
 }
 .content a {
   text-decoration: none;
-  color: #c9cacc;
+  color: #b0b1b5;
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: 100% 6px;
-  background-image: linear-gradient(transparent, transparent 5px, #c9cacc 5px, #c9cacc);
+  background-image: linear-gradient(transparent, transparent 5px, #b0b1b5 5px, #b0b1b5);
 }
 .content a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #d480aa 4px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 4px, #00f0cc 4px, #00f0cc);
 }
 .content a.icon {
   background: none;
 }
 .content a.icon:hover {
-  color: #d480aa;
+  color: #00f0cc;
 }
 .content h1 a,
 .content .h1 a,
@@ -506,7 +506,7 @@ body {
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: 100% 6px;
-  background-image: linear-gradient(transparent, transparent 6px, #d480aa 6px, #d480aa);
+  background-image: linear-gradient(transparent, transparent 6px, #00f0cc 6px, #00f0cc);
 }
 @media (min-width: 540px) {
   .image-wrap {
@@ -552,7 +552,7 @@ body {
   line-height: 2rem;
   font-style: normal;
   font-weight: 700;
-  color: #c9cacc;
+  color: #b0b1b5;
   margin-top: 0;
   margin-bottom: 0;
   -moz-osx-font-smoothing: grayscale;
@@ -580,7 +580,7 @@ body {
   font-size: 0.8rem;
   font-style: normal;
   font-weight: 200;
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #header #nav ul {
   list-style-type: none;
@@ -596,13 +596,13 @@ body {
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: 100% 6px;
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(transparent, transparent 5px, #00e26f 5px, #00e26f);
 }
 #header #nav ul li {
   display: inline-block;
   vertical-align: middle;
   margin-right: 15px;
-  border-right: 1px dotted #2bbc8a;
+  border-right: 1px dotted #00e26f;
 }
 #header #nav ul .icon {
   display: none;
@@ -661,7 +661,7 @@ body {
   background: none;
 }
 #header-post a.icon:hover {
-  color: #d480aa;
+  color: #00f0cc;
 }
 #header-post ol {
   list-style-type: none;
@@ -685,14 +685,14 @@ body {
   margin-left: 15px;
 }
 #header-post #menu-icon:hover {
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #header-post #menu-icon-tablet {
   float: right;
   margin-left: 15px;
 }
 #header-post #menu-icon-tablet:hover {
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #header-post #top-icon-tablet {
   margin-left: 15px;
@@ -701,10 +701,10 @@ body {
   position: fixed;
 }
 #header-post #top-icon-tablet:hover {
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #header-post .active {
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #header-post #menu {
   visibility: hidden;
@@ -714,7 +714,7 @@ body {
   font-size: 0.8rem;
   font-style: normal;
   font-weight: 200;
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #header-post #nav ul {
   line-height: 15px;
@@ -727,10 +727,10 @@ body {
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: 100% 6px;
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(transparent, transparent 5px, #00e26f 5px, #00e26f);
 }
 #header-post #nav ul li {
-  border-right: 1px dotted #2bbc8a;
+  border-right: 1px dotted #00e26f;
 }
 #header-post #nav ul li:last-child {
   border-right: 0;
@@ -767,18 +767,18 @@ body {
   padding-top: 1rem;
 }
 #header-post #toc a:hover {
-  color: #d480aa;
+  color: #00f0cc;
 }
 #header-post #toc .toc-level-1 {
   display: none;
 }
 #header-post #toc .toc-level-2 {
   font-size: 0.8rem;
-  color: #c9cacc;
+  color: #b0b1b5;
 }
 #header-post #toc .toc-level-2:before {
   content: "#";
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #header-post #toc .toc-level-3 {
   font-size: 0.7rem;
@@ -846,7 +846,7 @@ body {
   transition: opacity 0.2s;
   width: 100%;
   z-index: 5000000;
-  background: #212326;
+  background: #2e2e2e;
   border-top: 1px solid #666673;
 }
 #footer-post a {
@@ -858,7 +858,7 @@ body {
   background: none;
 }
 #footer-post a.icon:hover {
-  color: #d480aa;
+  color: #00f0cc;
 }
 #footer-post #nav-footer {
   margin-left: 1rem;
@@ -866,14 +866,14 @@ body {
   text-align: center;
 }
 #footer-post #nav-footer a {
-  color: #2bbc8a;
+  color: #00e26f;
   font-size: 1rem;
 }
 #footer-post #nav-footer a:hover {
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: 100% 6px;
-  background-image: linear-gradient(transparent, transparent 5px, #2bbc8a 5px, #2bbc8a);
+  background-image: linear-gradient(transparent, transparent 5px, #00e26f 5px, #00e26f);
 }
 #footer-post #nav-footer ul {
   list-style-type: none;
@@ -895,7 +895,7 @@ body {
   width: 100%;
 }
 #footer-post #actions-footer a {
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #footer-post #actions-footer ul {
   list-style-type: none;
@@ -939,18 +939,18 @@ body {
   line-height: 30px;
 }
 #footer-post #toc-footer a:hover {
-  color: #d480aa;
+  color: #00f0cc;
 }
 #footer-post #toc-footer .toc-level-1 {
   display: none;
 }
 #footer-post #toc-footer .toc-level-2 {
   font-size: 0.8rem;
-  color: #c9cacc;
+  color: #b0b1b5;
 }
 #footer-post #toc-footer .toc-level-2:before {
   content: "#";
-  color: #2bbc8a;
+  color: #00e26f;
 }
 #footer-post #toc-footer .toc-level-3 {
   font-size: 0.7rem;
@@ -1049,7 +1049,7 @@ article header .postdate {
 }
 article .content h2:before {
   content: "#";
-  color: #2bbc8a;
+  color: #00e26f;
   position: absolute;
   left: -1rem;
   top: -4px;
@@ -1297,7 +1297,7 @@ pre code {
 }
 .highlight {
   font-family: "Menlo", "Meslo LG", monospace;
-  background: #212326;
+  background: #2e2e2e;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   padding: 10px 15px;

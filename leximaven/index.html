@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://drawnepicenter.github.io/leximaven/index.html">
 <meta property="og:site_name" content="drawn|epic|enter">
 <meta property="og:description" content="leximavenIntroductionLeximaven is a powerful tool for searching word-related APIs from the command line. It can fetch acronyms, anagrams, bi-gram phrases, definitions, etymologies, example uses, hyphe">
-<meta property="og:updated_time" content="2017-01-09T05:37:04.084Z">
+<meta property="og:updated_time" content="2017-01-23T06:48:01.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leximaven">
 <meta name="twitter:description" content="leximavenIntroductionLeximaven is a powerful tool for searching word-related APIs from the command line. It can fetch acronyms, anagrams, bi-gram phrases, definitions, etymologies, example uses, hyphe">
@@ -151,6 +151,275 @@ leximaven map ubiquity
 <h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>See <a href="https://github.com/drawnepicenter/leximaven/blob/master/CONTRIBUTING.md" target="_blank" rel="external">CONTRIBUTING</a>.</p>
 <h2 id="Gratitude"><a href="#Gratitude" class="headerlink" title="Gratitude"></a>Gratitude</h2><p>Many thanks to all contributors to the libraries used in this project! And thanks to the creators and maintainers of the APIs that this tool consumes. Acronym Server, Datamuse, Onelook, Rhymebrain, Urban Dictionary, Wordnik, and Wordsmith are awesome!</p>
 <h2 id="Prose"><a href="#Prose" class="headerlink" title="Prose"></a>Prose</h2><p>For fun, read some of my <a href="https://github.com/drawnepicenter/prose#readme" target="_blank" rel="external">prose</a>…</p>
+<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/README.md#leximaven" target="_blank" rel="external">Project Status</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/README.md#introduction" target="_blank" rel="external">Introduction</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/README.md#installation" target="_blank" rel="external">Installation</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/README.md#usage" target="_blank" rel="external">Usage</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/README.md#resources" target="_blank" rel="external">Resources</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/CONTRIBUTING.md" target="_blank" rel="external">Contributing</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/README.md#graditude" target="_blank" rel="external">Gratitude</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/README.md#extras" target="_blank" rel="external">Extras</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#acronyms" target="_blank" rel="external">Acronyms</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#anagrams" target="_blank" rel="external">Anagrams</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#completion" target="_blank" rel="external">Completion</a><ul>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#bash-instructions" target="_blank" rel="external">Bash instructions</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#zsh-instructions" target="_blank" rel="external">Zsh instructions</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#configuration" target="_blank" rel="external">Configuration</a><ul>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#examples" target="_blank" rel="external">Examples</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#saving-flags" target="_blank" rel="external">Saving flags</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#editing" target="_blank" rel="external">Editing</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#datamuse" target="_blank" rel="external">Datamuse</a><ul>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#hard-constraints" target="_blank" rel="external">Hard Constraints</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#contextual-hints" target="_blank" rel="external">Contextual hints</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#defaults" target="_blank" rel="external">Defaults</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#engine" target="_blank" rel="external">Engine</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#frequently-or-never-asked-questions" target="_blank" rel="external">Frequently (or Never) Asked Questions</a><ul>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#what-is-leximaven" target="_blank" rel="external">What is leximaven?</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#what-is-lyracyst" target="_blank" rel="external">What is Lyracyst?</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#what-is-noon" target="_blank" rel="external">What is noon?</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#why-nodejs" target="_blank" rel="external">Why Node.js?</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#why-es62015" target="_blank" rel="external">Why ES6(2015)?</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#why-create-a-tool-like-this" target="_blank" rel="external">Why create a tool like this?</a></li>
+</ul>
+</li>
+<li><a href="#https://github.com/drawnepicenter/leximaven/wikifeatures">Features</a></li>
+<li><a href="#https://github.com/drawnepicenter/leximaven/wikinew-apis">New APIs</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#onelook" target="_blank" rel="external">Onelook</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#rate-limiting" target="_blank" rel="external">Rate limiting</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#rhymebrain" target="_blank" rel="external">Rhymebrain</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#themes" target="_blank" rel="external">Themes</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#urban-dictionary" target="_blank" rel="external">Urban Dictionary</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#wordmap" target="_blank" rel="external">Wordmap</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#wordnik" target="_blank" rel="external">Wordnik</a></li>
+</ul>
+<h2 id="Acronyms"><a href="#Acronyms" class="headerlink" title="Acronyms"></a>Acronyms</h2><p>leximaven command: <strong>acronym</strong>, <strong>acro</strong>, <strong>ac</strong></p>
+<p><a href="http://acronyms.silmaril.ie/#about" target="_blank" rel="external">Silmaril’s Acronym Server</a> began as an email service in 1987. Since then it has helped people know acronyms in one form or another. See their <a href="http://acronyms.silmaril.ie/#api" target="_blank" rel="external">documentation</a> for the XML API.</p>
+<h2 id="Anagrams"><a href="#Anagrams" class="headerlink" title="Anagrams"></a>Anagrams</h2><p>leximaven command: <strong>anagram</strong>, <strong>an</strong></p>
+<p>Wordsmith’s <a href="http://www.wordsmith.org/anagram/advanced.html" target="_blank" rel="external">anagram generator</a> is one of the best. It’s been around forever and it is rock solid. Here’s Wordsmith’s own <a href="http://wordsmith.org/anagram/tips.html" target="_blank" rel="external">tips for finding great anagrams</a>, and <a href="http://wordsmith.org/anagram/practical.html" target="_blank" rel="external">practical uses of anagrams</a>.</p>
+<h2 id="Completion"><a href="#Completion" class="headerlink" title="Completion"></a>Completion</h2><p>leximaven command: <strong>completion</strong>, <strong>comp</strong></p>
+<h3 id="Bash-instructions"><a href="#Bash-instructions" class="headerlink" title="Bash instructions"></a>Bash instructions</h3><p>Run <code>leximaven comp &gt;&gt; ~/.bashrc</code>, then <code>source ~/.bashrc</code> to enable shell completion for leximaven commands and options.</p>
+<h3 id="Zsh-instructions"><a href="#Zsh-instructions" class="headerlink" title="Zsh instructions"></a>Zsh instructions</h3><p>To Zsh read your bash script, add to <code>~/.zshrc</code>:<br><code>autoload bashcompinit</code><br><code>bashcompinit</code></p>
+<p>Now run <code>leximaven comp &gt;&gt; ~/.zshrc</code> and <code>source ~/.zshrc</code>.</p>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>leximaven command: <strong>configuration</strong>, <strong>config</strong>, <strong>conf</strong></p>
+<p>leximaven subcommands:</p>
+<ul>
+<li><strong>init</strong> - Creates configuration file in home directory (~/.leximaven.noon)</li>
+<li><strong>get</strong> - Gets a value for a given key. Accepts dot notation for nested values.</li>
+<li><strong>set</strong> - Sets a given key to a given value. Accepts dot notation for nested values.</li>
+</ul>
+<p>leximaven can get and set values in the configuration file once it’s been initialized. leximaven uses the <a href="https://github.com/deoxxa/dotty" target="_blank" rel="external">dotty</a> library to allow dot notation for nested values. See the <a href="https://github.com/drawnepicenter/leximaven/wiki#frequently-or-never-asked-questions" target="_blank" rel="external">FAQ</a> for why I chose <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> for the configuration file format.</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>For single values like <code>verbose</code> you can just do <code>leximaven config set verbose true</code>. For nested properties, use dot notation like so:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ leximaven config get wordsmith.lang</div><div class="line">Option wordsmith.lang is english.</div><div class="line"></div><div class="line">$ leximaven config set onelook.links true</div><div class="line">Set option onelook.links to true.</div></pre></td></tr></table></figure>
+<h3 id="Saving-flags"><a href="#Saving-flags" class="headerlink" title="Saving flags"></a>Saving flags</h3><p>By default, the <strong>merge</strong> option is set to <em>true</em>, so CLI flags will be merged with the configuration from file. If you pass -s|–save with this, the config file will be overwritten with the current flags. If <strong>merge</strong> is set to <em>false</em>, the config file will always be used and –save won’t work. To restore all defaults run <code>leximaven config init --force</code>.</p>
+<h3 id="Editing"><a href="#Editing" class="headerlink" title="Editing"></a>Editing</h3><p>Refer to the <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> syntax guide. When editing the configuration file manually, please remember that empty strings are denoted by two pipes: || and 2 or more spaces separate keys from values.</p>
+<h2 id="Datamuse"><a href="#Datamuse" class="headerlink" title="Datamuse"></a>Datamuse</h2><p>leximaven command: <strong>datamuse</strong>, <strong>dmuse</strong>, <strong>dm</strong></p>
+<p>leximaven subcommands:</p>
+<ul>
+<li><strong>get</strong> Datamuse query</li>
+<li><strong>info</strong> Datamuse metrics and API usage</li>
+</ul>
+<p>Datamuse powers Onelook. It defines a query syntax for conditions which are described below. Follow URL parameter syntax (ml=word+or+phrase&amp;) and join multi-word conditions with+plus+signs. See <a href="http://www.datamuse.com/api/" target="_blank" rel="external">Datamuse</a> for detailed API info. Requests are limited to 100,000/day.</p>
+<h3 id="Hard-Constraints"><a href="#Hard-Constraints" class="headerlink" title="Hard Constraints"></a>Hard Constraints</h3><p><strong>ml - Means like</strong> constraint: require that the results have a meaning related to this string value, which can be any word or sequence of words. (This is effectively the <a href="http://onelook.com/reverse-dictionary.shtml" target="_blank" rel="external">reverse dictionary</a> feature of OneLook.)</p>
+<p><strong>sl - Sounds like</strong> constraint: require that the results are pronounced similarly to this string of characters. (If the string of characters doesn’t have a known pronunciation, the system will make its best guess using a text-to-phonemes algorithm.)</p>
+<p><strong>sp - Spelled like</strong> constraint: require that the results are spelled similarly to this string of characters, or that they match this <a href="http://www.onelook.com/?c=faq#patterns" target="_blank" rel="external">wildcard</a> pattern. A pattern can include any combination of alphanumeric characters, spaces, and two reserved characters that represent placeholders — <strong>*</strong> (which matches any number of characters) and <strong>?</strong> (which matches exactly one character).</p>
+<p><strong>rel_[code] - Related words</strong> constraints: require that each of the resulting words, when paired with the word in this parameter, are in a predefined lexical relation indicated by [code]. Any number of these parameters may be specified any number of times. An assortment of semantic, phonetic, and corpus-statistics-based relations are available.</p>
+<p>[code] is a three-letter identifier from the list below.</p>
+<table>
+<thead>
+<tr>
+<th>[code]</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jja</td>
+<td>Popular nouns modified by the given adjective, per Google Books Ngrams</td>
+<td>gradual → increase</td>
+</tr>
+<tr>
+<td>jjb</td>
+<td>Popular adjectives used to modify the given noun, per Google Books Ngrams</td>
+<td>beach → sandy</td>
+</tr>
+<tr>
+<td>syn</td>
+<td>Synonyms (words contained within the same WordNet synset)</td>
+<td>ocean → sea</td>
+</tr>
+<tr>
+<td>ant</td>
+<td>Antonyms (per WordNet)</td>
+<td>late → early</td>
+</tr>
+<tr>
+<td>spc</td>
+<td>“Kind of” (direct hypernyms, per WordNet)</td>
+<td>gondola → boat</td>
+</tr>
+<tr>
+<td>gen</td>
+<td>“More general than” (direct hyponyms, per WordNet)</td>
+<td>boat → gondola</td>
+</tr>
+<tr>
+<td>com</td>
+<td>“Comprises” (direct holonyms, per WordNet)</td>
+<td>car → accelerator</td>
+</tr>
+<tr>
+<td>par</td>
+<td>“Part of” (direct meronyms, per WordNet)</td>
+<td>trunk → tree</td>
+</tr>
+<tr>
+<td>bga</td>
+<td>Frequent followers (w’ such that P(w’:w) ≥ 0.001, per Google Books Ngrams)</td>
+<td>wreak → havoc</td>
+</tr>
+<tr>
+<td>bgb</td>
+<td>Frequent predecessors (w′ such that P(w:w′) ≥ 0.001, per Google Books Ngrams)</td>
+<td>havoc → wreak</td>
+</tr>
+<tr>
+<td>rhy</td>
+<td>Rhymes (“perfect” rhymes, per RhymeZone)</td>
+<td>spade → aid</td>
+</tr>
+<tr>
+<td>nry</td>
+<td>Approximate rhymes (per RhymeZone)</td>
+<td>forest → chorus</td>
+</tr>
+<tr>
+<td>hom</td>
+<td>Homophones (sound-alike words)</td>
+<td>course → coarse</td>
+</tr>
+<tr>
+<td>cns</td>
+<td>Consonant match</td>
+<td>sample → simple</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Contextual-hints"><a href="#Contextual-hints" class="headerlink" title="Contextual hints"></a>Contextual hints</h3><p><strong>topics - Topic words:</strong> An optional hint to the system about the theme of the document being written. Results will be skewed toward these topics. At most 5 words can be specified. Space or comma delimited. Nouns work best.</p>
+<p><strong>lc - Left context:</strong> An optional hint to the system about the word that appears immediately to the left of the target word in a sentence. (At this time, only a single word may be specified.)</p>
+<p><strong>rc - Right context:</strong> An optional hint to the system about the word that appears immediately to the right of the target word in a sentence. (At this time, only a single word may be specified.)</p>
+<p>In the above table, the first four parameters (<strong>ml, sl, sp, rel_[code]</strong>) can be thought of as hard constraints on the result set, while the next three (<strong>topic, lc, and rc</strong>) can be thought of as context hints. The latter only impact the order in which results are returned. All parameters are optional.</p>
+<h2 id="Defaults"><a href="#Defaults" class="headerlink" title="Defaults"></a>Defaults</h2><ul>
+<li>The flags and their short forms are carefully chosen to avoid conflicts with <em>that specific command’s other flags</em>. Another command may use different short forms for disambiguation. For example, most commands use the short form -l/m for –limit/max. Now compare the anagram command, which has <strong>four</strong> long options that start with ‘l’, and <strong>three</strong> that start with ‘m’.</li>
+<li>The three options that are considered ‘global’ and are always the same are –force (-f), –out (-o), and –save (-s). Output format is determined automatically by the extension of the outfile.</li>
+<li>leximaven tries to have sensible defaults so that you can get interesting results without having to use flags. Most of the time you can just run the command with a query.</li>
+<li>Using the -h/–help flag with a command will also list default values for each flag.</li>
+<li>Mostly CLI defaults are based on the API’s defaults. In a few cases (like the WLMI option for Wordnik’s bi-gram phrases) I based the default on my experimentation with the API.</li>
+<li>The <strong>date</strong> section of Datamuse, Onelook, Rhymebrain, and Wordnik is hardcoded defaults used for rate-limiting.</li>
+<li>Find what works for you and use the configuration system to override the built-in defaults.</li>
+</ul>
+<h2 id="Engine"><a href="#Engine" class="headerlink" title="Engine"></a>Engine</h2><ul>
+<li><a href="https://github.com/chalk/chalk" target="_blank" rel="external">chalk</a>, <a href="https://github.com/sindresorhus/ora" target="_blank" rel="external">ora</a>, and <a href="https://github.com/nexdrew/yargonaut" target="_blank" rel="external">yargonaut</a> are used to style the terminal output.</li>
+<li><a href="https://github.com/moment/moment" target="_blank" rel="external">moment</a> manipulates timestamps for rate limiting.</li>
+<li><a href="https://github.com/Schibsted-Tech-Polska/good-guy-http" target="_blank" rel="external">good-guy-http</a> gets and caches HTTP requests.</li>
+<li><a href="https://github.com/yargs/yargs" target="_blank" rel="external">yargs</a> is used for creating the CLI.</li>
+<li><a href="https://github.com/Leonidas-from-XIV/node-xml2js" target="_blank" rel="external">xml2js</a> is used for XML format, and <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> is used for all other formats.</li>
+<li><a href="https://github.com/lapwinglabs/x-ray" target="_blank" rel="external">x-ray</a> scrapes sites without an exposed JSON or XML API.</li>
+</ul>
+<h2 id="Frequently-or-Never-Asked-Questions"><a href="#Frequently-or-Never-Asked-Questions" class="headerlink" title="Frequently (or Never) Asked Questions"></a>Frequently (or Never) Asked Questions</h2><h3 id="What-is-leximaven"><a href="#What-is-leximaven" class="headerlink" title="What is leximaven?"></a>What is leximaven?</h3><p>leximaven is a command-line tool that fetches information about words and pretty-prints the results in your terminal. It is based on Lyracyst which I released under my other pseudonym <a href="https://github.com/weirdpercent" target="_blank" rel="external">weirdpercent</a>.</p>
+<h3 id="What-is-Lyracyst"><a href="#What-is-Lyracyst" class="headerlink" title="What is Lyracyst?"></a>What is Lyracyst?</h3><p><a href="https://github.com/weirdpercent/lyracyst" target="_blank" rel="external">Lyracyst</a> is a similar tool written in Ruby and is no longer maintained. I’ve wanted a Javascript version for awhile, and leximaven is the result. It has features never before seen in Lyracyst and is generally more robust.</p>
+<h3 id="What-is-noon"><a href="#What-is-noon" class="headerlink" title="What is noon?"></a>What is noon?</h3><p><a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a>, or ‘nother ordinary object notation, is a human-readable data format created by <a href="https://github.com/monsterkodi" target="_blank" rel="external">monsterkodi</a>. Despite noon being very new, I decided to use it for leximaven’s configuration file because it is incredibly terse, even more so than <a href="http://hjson.org" target="_blank" rel="external">hjson</a> and <a href="https://github.com/bevry/cson" target="_blank" rel="external">cson</a>. This is me supporting a young project that I would like to see get wider recognition. It also makes it dead simple to load and save cson, json, plist, and yaml.</p>
+<h3 id="Why-Node-js"><a href="#Why-Node-js" class="headerlink" title="Why Node.js?"></a>Why Node.js?</h3><p>I’ve been wanting to learn Javascript and Node for a long time, and porting a codebase I know very well seemed a good way to do that. Though Ruby is cross-platform, I don’t like the headache of trying to support multiple implementations (1.8 vs 1.9, JRuby, Rubinius, Macruby, etc). Node just seems to do cross-platform better. It also makes building some kind of web interface in the future infinitely easier.</p>
+<h3 id="Why-ES6-2015"><a href="#Why-ES6-2015" class="headerlink" title="Why ES6(2015)?"></a>Why ES6(2015)?</h3><p>Because you can take the <a href="https://github.com/lukehoban/es6features" target="_blank" rel="external">parts</a> you like and leave the rest. Tools like Babel make it really easy to do this.</p>
+<h3 id="Why-create-a-tool-like-this"><a href="#Why-create-a-tool-like-this" class="headerlink" title="Why create a tool like this?"></a>Why create a tool like this?</h3><p>I am a leximaven, a lover of words. I do a lot of writing and I wanted a tool for constructing prose that <strong>rocks</strong>.</p>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#new-apis" target="_blank" rel="external">Extensible</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/wiki#wordmap" target="_blank" rel="external">Maps of word info</a></li>
+<li>Configuration file in your home directory called <code>.leximaven.noon</code></li>
+<li>Access configuration settings by passing commands, setting flags, or just editing the configuration file manually</li>
+<li>Sensible command line defaults and aliases</li>
+<li>XML parsing and building with <a href="https://github.com/Leonidas-from-XIV/node-xml2js" target="_blank" rel="external">xml2js</a></li>
+<li>In-memory caching and other neat features handled by <a href="https://github.com/Schibsted-Tech-Polska/good-guy-http" target="_blank" rel="external">good-guy-http</a>, which is based on <a href="https://github.com/request/request" target="_blank" rel="external">request</a></li>
+<li>Scrape websites with <a href="https://github.com/lapwinglabs/x-ray" target="_blank" rel="external">x-ray</a></li>
+<li>Save data to <a href="https://github.com/bevry/cson" target="_blank" rel="external">CSON</a>, JSON, <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a>, Plist, XML, and YAML</li>
+<li>Acronyms and Dewey Decimal Classification codes from <a href="http://acronyms.silmaril.ie" target="_blank" rel="external">Acronym Server</a></li>
+<li>Many kinds of related words based on constraints from <a href="http://www.datamuse.com/api/" target="_blank" rel="external">Datamuse</a></li>
+<li>Definitions, phrases, related words, and resource links from <a href="http://www.onelook.com" target="_blank" rel="external">Onelook</a></li>
+<li>Rhymes, word info, and portmanteaus from <a href="http://rhymebrain.com" target="_blank" rel="external">Rhymebrain</a></li>
+<li>Definitions from <a href="http://www.urbandictionary.com" target="_blank" rel="external">Urban Dictionary</a></li>
+<li>Definitions, examples, related words, pronunciations, hyphenation, phrases, and etymologies from <a href="http://www.wordnik.com" target="_blank" rel="external">Wordnik</a></li>
+<li>Anagrams from <a href="http://www.wordsmith.org/anagram/advanced.html" target="_blank" rel="external">Wordsmith</a></li>
+<li>Automatic rate-limiting for Datamuse, Onelook, Rhymebrain, and Wordnik</li>
+</ul>
+<h2 id="New-APIs"><a href="#New-APIs" class="headerlink" title="New APIs"></a>New APIs</h2><p>Adding new APIs to leximaven is pretty straightforward. Look at the docs for <a href="https://github.com/yargs/yargs" target="_blank" rel="external">yargs</a> to understand the module format. Urban Dictionary has the simplest API, so it’s a good example of how to implement a new module.</p>
+<ul>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/src/commands/urban.js" target="_blank" rel="external">urban.js</a></li>
+</ul>
+<p>Each module registers a command with yargs. The command string defines the command and arguments. The builder object defines our options. The handler function contains our command logic.</p>
+<p>After configuration checks and theme loading, we assemble the URL from the parsed arguments, <code>argv</code>. <code>good-guy-http</code> fetches the JSON response. For each piece of data that is printed in the console, the same data is added to the <code>tofile</code> object. If <code>--out</code> is specified, this object is passed to <code>tools.outFile</code> which is then encoded and saved. Finally, if <code>--save</code> is specified, options are saved to configuration.</p>
+<p>As a more complete example, here is the Datamuse module:</p>
+<ul>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/src/commands/datamuse.js" target="_blank" rel="external">datamuse.js</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/src/commands/datamuse/get.js" target="_blank" rel="external">datamuse/get.js</a></li>
+<li><a href="https://github.com/drawnepicenter/leximaven/blob/master/src/commands/datamuse/info.js" target="_blank" rel="external">datamuse/info.js</a></li>
+</ul>
+<p><strong>datamuse.js</strong> sets our subdirectory and loads each module in this folder as a subcommand of <strong>datamuse</strong>.</p>
+<p><strong>get.js</strong> is the API query command. After the config is loaded, the timestamp is checked for rate limiting. If the limit hasn’t been reached, the proceed check runs the command logic.</p>
+<p><strong>info.js</strong> displays Datamuse metrics and API usage.</p>
+<h2 id="Onelook"><a href="#Onelook" class="headerlink" title="Onelook"></a>Onelook</h2><p>leximaven command: <strong>onelook</strong>, <strong>one</strong>, <strong>ol</strong></p>
+<p><a href="http://www.onelook.com/?c=faq" target="_blank" rel="external">Onelook</a> offers an XML API for basic search features. Onelook is good for definitions and quick searches, use <a href="#datamuse">Datamuse</a> (which powers Onelook) when you need more control. Requests are limited to 10,000/day.</p>
+<p>leximaven fetches definitions, phrases, related words, and optionally resource links (verbose).</p>
+<h3 id="Rate-limiting"><a href="#Rate-limiting" class="headerlink" title="Rate limiting"></a>Rate limiting</h3><p>Rate limits are as follows:</p>
+<ul>
+<li>Datamuse - 100,000/day</li>
+<li>Onelook - 10,000/day</li>
+<li>Rhymebrain - 350/hour</li>
+<li>Wordnik - 15,000/hour</li>
+</ul>
+<p>For these services, leximaven automatically handles these limits through the hardcoded <strong>date</strong> section of the config file. Timestamps are initialized during <strong>config init</strong>. In addition to notifying you of the remaining requests and each reset, an error will be thrown if:</p>
+<ul>
+<li>Attempting to set these values with <strong>config set</strong></li>
+<li>Using a command when limit has been reached</li>
+</ul>
+<p>You can turn off the per-command countdown of remaining requests by setting the <strong>usage</strong> option to <em>false</em>.</p>
+<p>Please read and follow the terms of service for these APIs, they are so awesome and useful and we’re all really lucky to have them. The rates for free access are generous. For those services that don’t have specific rate limits respect and preserve them for all to share.</p>
+<h2 id="Rhymebrain"><a href="#Rhymebrain" class="headerlink" title="Rhymebrain"></a>Rhymebrain</h2><p>leximaven command: <strong>rhymebrain</strong>, <strong>rbrain</strong>, <strong>rb</strong></p>
+<p>leximaven subcommands:</p>
+<ul>
+<li><strong>combine</strong>, <strong>comb</strong>, <strong>portmanteau</strong> (combine/portmanteau)</li>
+<li><strong>info</strong> (word info)</li>
+<li><strong>rhyme</strong>, <strong>rh</strong> (rhymes)</li>
+</ul>
+<p>leximaven consumes the <a href="http://rhymebrain.com/api.html" target="_blank" rel="external">Rhymebrain.com</a> JSON API to fetch rhymes, word info, and portmanteaus. ISO 639-1 <a href="http://www.loc.gov/standards/iso639-2/php/English_list.php" target="_blank" rel="external">Language Codes</a> are needed for Rhymebrain functions. Requests are limited to 350/hour.</p>
+<p>The offensive word flag is <strong><em>not</em></strong> set for some words that are quite widely considered offensive (bitch, shit, etc.). This flag is colored <strong>red</strong>, the other two are white.</p>
+<h2 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h2><p>leximaven command: <strong>list</strong>, <strong>ls</strong>, <strong>themes</strong></p>
+<p>leximaven has a theme system that is accessible through the configuration file setting <code>theme</code> and the <code>themes</code> directory. Theme files are in <a href="https://github.com/mosterkodi/noon" target="_blank" rel="external">noon</a> format and use dot notation to store the <a href="https://github.com/chalk/chalk" target="_blank" rel="external">chalk</a> styles.</p>
+<p>When printing data to the console, themes follow this order: <code>prefix-&gt;label-&gt;suffix-&gt;connector-&gt;content</code>. The label function also takes a direction, ‘right’ or ‘down’. ‘Right’ prints everything on one line, whereas ‘down’ prints the connector and content on the line below.</p>
+<h2 id="Urban-Dictionary"><a href="#Urban-Dictionary" class="headerlink" title="Urban Dictionary"></a>Urban Dictionary</h2><p>leximaven command: <strong>urban</strong>, <strong>urb</strong>, <strong>slang</strong></p>
+<p>leximaven consumes <a href="http://www.urbandictionary.com" target="_blank" rel="external">Urban Dictionary</a>‘s unofficial JSON API to provide slang and colloquialisms. Because it’s an <em>urban</em> dictionary it should go without saying, but this site is frequently vulgar.</p>
+<h2 id="Wordmap"><a href="#Wordmap" class="headerlink" title="Wordmap"></a>Wordmap</h2><p>leximaven command: <strong>wordmap</strong>, <strong>map</strong>, <strong>wm</strong></p>
+<p>Printing the output of each leximaven command in succession is a feature I call wordmaps. The command <code>leximaven wordmap ubiquity</code> will get acronyms, anagrams, definitions, etymologies, examples, hyphenation, info, portmanteaus, pronunciations, related words, rhymes, and urban definitions for the word “ubiquity” all at once. For simplicity’s sake, the wordmap command does not serialize the data to file. If you want your results serialized, make a simple shell script like the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">mkdir -p noon</div><div class="line">leximaven wordnik define -o noon/define.noon $1</div><div class="line">leximaven wordnik example -o noon/example.noon $1</div><div class="line">leximaven wordnik hyphen -o noon/hyphen.noon $1</div><div class="line">leximaven wordnik origin -o noon/origin.noon $1</div><div class="line">leximaven wordnik phrase -o noon/phrase.noon $1</div><div class="line">leximaven wordnik pronounce -o noon/pronounce.noon $1</div><div class="line">leximaven wordnik relate -o noon/relate.noon $1</div><div class="line">leximaven rhymebrain combine -o noon/combine.noon $1</div><div class="line">leximaven rhymebrain info -o noon/info.noon $1</div><div class="line">leximaven rhymebrain rhyme -o noon/rhyme.noon $1</div><div class="line">leximaven acronym -o noon/acronym.noon $1</div><div class="line">leximaven anagram -o noon/anagram.noon $1</div><div class="line">leximaven datamuse -o noon/dmuse.noon ml=$1</div><div class="line">leximaven onelook -o noon/look.noon $1</div><div class="line">leximaven urban -o noon/urban.noon $1</div></pre></td></tr></table></figure>
+<p>Then run it like this: <code>sh noon.sh ubiquity</code></p>
+<h2 id="Wordnik"><a href="#Wordnik" class="headerlink" title="Wordnik"></a>Wordnik</h2><p>leximaven command: <strong>wordnik</strong>, <strong>wnik</strong>, <strong>wn</strong></p>
+<p>leximaven subcommands:</p>
+<ul>
+<li><strong>define</strong>, <strong>def</strong> (definitions)</li>
+<li><strong>example</strong>, <strong>ex</strong> (examples)</li>
+<li><strong>hyphen</strong>, <strong>hyphenate</strong>, <strong>hy</strong> (hyphenation)</li>
+<li><strong>origin</strong>, <strong>or</strong>, <strong>etymology</strong> (origin/etymology)</li>
+<li><strong>phrase</strong>, <strong>ph</strong>, <strong>ngram</strong> (phrases)</li>
+<li><strong>pronounce</strong>, <strong>pr</strong> (pronunciations)</li>
+<li><strong>relate</strong>, <strong>related</strong>, <strong>rel</strong> (related words)</li>
+</ul>
+<p>Please refer to CLI documentation or Wordnik’s <a href="http://developer.wordnik.com/docs.html" target="_blank" rel="external">developer docs</a> for details. Wordnik is used to fetch definitions, examples, related words, pronunciations, hyphenation, phrases, and etymologies. These commands will not work without an API key in environment variable WORDNIK. Requests are limited to 15,000/hour.</p>
 
   </div>
 </article>

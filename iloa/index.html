@@ -14,7 +14,7 @@ iloa is a powerful tool for gaining knowledge from the command line. It queries 
 <meta property="og:site_name" content="drawn|epic|enter">
 <meta property="og:description" content="iloaIntroductioniloa is Samoan for knowing
 iloa is a powerful tool for gaining knowledge from the command line. It queries DuckDuckGo, Encyclopedia of Life, Weather Underground, Wikipedia, Wolfram|Alp">
-<meta property="og:updated_time" content="2017-01-09T05:37:58.633Z">
+<meta property="og:updated_time" content="2017-01-23T06:52:53.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iloa">
 <meta name="twitter:description" content="iloaIntroductioniloa is Samoan for knowing
@@ -137,6 +137,176 @@ iloa wp &apos;George Gurdjieff&apos;
 </ul>
 <h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>See <a href="https://github.com/drawnepicenter/iloa/blob/master/CONTRIBUTING.md" target="_blank" rel="external">CONTRIBUTING</a>.</p>
 <h2 id="Gratitude"><a href="#Gratitude" class="headerlink" title="Gratitude"></a>Gratitude</h2><p>Many thanks to all contributors to the libraries used in this project! And thanks to the creators and maintainers of the APIs that this tool consumes. DuckDuckGo, Encyclopedia of Life, Weather Underground, Wikipedia, and Wolfram|Alpha are awesome!</p>
+<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/README.md#iloa" target="_blank" rel="external">Project Status</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/README.md#introduction" target="_blank" rel="external">Introduction</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/README.md#installation" target="_blank" rel="external">Installation</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/README.md#usage" target="_blank" rel="external">Usage</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/README.md#resources" target="_blank" rel="external">Resources</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/CONTRIBUTING.md" target="_blank" rel="external">Contributing</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/README.md#gratitude" target="_blank" rel="external">Gratitude</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/README.md#extras" target="_blank" rel="external">Extras</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#completion" target="_blank" rel="external">Completion</a><ul>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#bash-instructions" target="_blank" rel="external">Bash instructions</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#zsh-instructions" target="_blank" rel="external">Zsh instructions</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#configuration" target="_blank" rel="external">Configuration</a><ul>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#examples" target="_blank" rel="external">Examples</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#saving-flags" target="_blank" rel="external">Saving flags</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#editing" target="_blank" rel="external">Editing</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#duckduckgo-instant-answers" target="_blank" rel="external">DuckDuckGo Instant Answers</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#engine" target="_blank" rel="external">Engine</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#encyclopedia-of-life" target="_blank" rel="external">Encyclopedia of Life</a><ul>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#eol-in-iloa" target="_blank" rel="external">EOL in iloa</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#frequently-or-never-asked-questions" target="_blank" rel="external">Frequently (or Never) Asked Questions</a><ul>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#what-is-noon" target="_blank" rel="external">What is noon?</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#features" target="_blank" rel="external">Features</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#new-apis" target="_blank" rel="external">New APIs</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#overlap" target="_blank" rel="external">Overlap</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#weather-underground" target="_blank" rel="external">Weather Underground</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#wikipedia" target="_blank" rel="external">Wikipedia</a></li>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#wolframalpha" target="_blank" rel="external">Wolfram|Alpha</a></li>
+</ul>
+<h2 id="Completion"><a href="#Completion" class="headerlink" title="Completion"></a>Completion</h2><p>iloa command: <strong>completion</strong>, <strong>comp</strong></p>
+<h3 id="Bash-instructions"><a href="#Bash-instructions" class="headerlink" title="Bash instructions"></a>Bash instructions</h3><p>Run <code>iloa comp &gt;&gt; ~/.bashrc</code>, then <code>source ~/.bashrc</code> to enable shell completion for iloa commands and options.</p>
+<h3 id="Zsh-instructions"><a href="#Zsh-instructions" class="headerlink" title="Zsh instructions"></a>Zsh instructions</h3><p>To Zsh read your bash script, add to <code>~/.zshrc</code>:<br><code>autoload bashcompinit</code><br><code>bashcompinit</code></p>
+<p>Now run <code>iloa comp &gt;&gt; ~/.zshrc</code> and <code>source ~/.zshrc</code>.</p>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>iloa can get and set values in the configuration file once it’s been initialized. iloa uses the <a href="https://github.com/deoxxa/dotty" target="_blank" rel="external">dotty</a> library to allow dot notation for nested values. See the <a href="https://github.com/drawnepicenter/iloa/wiki#frequently-or-never-asked-questions" target="_blank" rel="external">FAQ</a> for why I chose <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> for the configuration file format.</p>
+<p>iloa command: <strong>configuration</strong>, <strong>config</strong>, <strong>conf</strong></p>
+<p>iloa subcommands:</p>
+<ul>
+<li><strong>init</strong>, <strong>i</strong> - Creates configuration file in home directory (~/.iloa.noon)</li>
+<li><strong>get</strong>, <strong>g</strong> - Gets a value for a given key. Accepts dot notation for nested values.</li>
+<li><strong>set</strong>, <strong>s</strong> - Sets a given key to a given value. Accepts dot notation for nested values.</li>
+</ul>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>For single values like <code>verbose</code> you can just do <code>iloa config set verbose true</code>. For nested properties, use dot notation like so:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ iloa config get wiki.intro</div><div class="line">Option wiki.intro is true.</div><div class="line"></div><div class="line">$ iloa config set wiki.intro true</div><div class="line">Set option wiki.intro to true.</div></pre></td></tr></table></figure>
+<h3 id="Saving-flags"><a href="#Saving-flags" class="headerlink" title="Saving flags"></a>Saving flags</h3><p>By default, the <strong>merge</strong> option is set to <em>true</em>, so CLI flags will be merged with the configuration from file. If you pass -s|–save with this, the config file will be overwritten with the current flags. If <strong>merge</strong> is set to <em>false</em>, the config file will always be used and –save won’t work. To restore all defaults run <code>iloa config init --force</code>.</p>
+<h3 id="Editing"><a href="#Editing" class="headerlink" title="Editing"></a>Editing</h3><p>Refer to the <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> syntax guide. When editing the configuration file manually, please remember that empty strings are denoted by two pipes: || and 2 or more spaces separate keys from values.</p>
+<h2 id="DuckDuckGo-Instant-Answers"><a href="#DuckDuckGo-Instant-Answers" class="headerlink" title="DuckDuckGo Instant Answers"></a>DuckDuckGo Instant Answers</h2><p>iloa command: <strong>duckduckgo</strong>, <strong>duck</strong>, <strong>dg</strong></p>
+<p>DDG’s API provides instant answers to arbitrary searches. In the case of a generalized term, a disambiguation will be returned:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iloa duck tool</div></pre></td></tr></table></figure>
+<p>Like Wikipedia, parentheses around a classification indicate specific articles, like so:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iloa duck &apos;Tool (band)&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li><p><a href="https://duckduckgo.com/bang" target="_blank" rel="external">Bangs</a> - DuckDuckGo’s API also accepts bang redirects to over 8 thousand sites with a query interface. Example:</p>
+<p>  iloa duck ‘!songmeaning Tool’</p>
+</li>
+</ul>
+<p>…redirects to songmeanings.com query for the band Tool.</p>
+<p>You can contribute to better instant answers with the <a href="https://duckduckhack.com/" target="_blank" rel="external">DuckDuckHack</a> platform and join the community at <a href="https://duck.co/" target="_blank" rel="external">duck.co</a>.</p>
+<h2 id="Engine"><a href="#Engine" class="headerlink" title="Engine"></a>Engine</h2><ul>
+<li><a href="https://github.com/chalk/chalk" target="_blank" rel="external">chalk</a>, <a href="https://github.com/sindresorhus/ora" target="_blank" rel="external">ora</a>, and <a href="https://github.com/nexdrew/yargonaut" target="_blank" rel="external">yargonaut</a> are used to style the terminal output.</li>
+<li><a href="https://github.com/moment/moment" target="_blank" rel="external">moment</a> manipulates timestamps for rate limiting.</li>
+<li><a href="https://github.com/Schibsted-Tech-Polska/good-guy-http" target="_blank" rel="external">good-guy-http</a> gets and caches HTTP requests.</li>
+<li><a href="https://github.com/yargs/yargs" target="_blank" rel="external">yargs</a> is used for creating the CLI.</li>
+<li><a href="https://github.com/Leonidas-from-XIV/node-xml2js" target="_blank" rel="external">xml2js</a> is used for XML format, and <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> is used for all other formats.</li>
+</ul>
+<h2 id="Encyclopedia-of-Life"><a href="#Encyclopedia-of-Life" class="headerlink" title="Encyclopedia of Life"></a>Encyclopedia of Life</h2><p>From <a href="http://eol.org/about" target="_blank" rel="external">eol.org</a>:</p>
+<p>Our knowledge of the many life-forms on Earth - of animals, plants, fungi, protists and bacteria - is scattered around the world in books, journals, databases, websites, specimen collections, and in the minds of people everywhere. Imagine what it would mean if this information could be gathered together and made available to everyone – anywhere – at a moment’s notice.</p>
+<p><strong>This dream is becoming a reality through the Encyclopedia of Life.</strong></p>
+<h3 id="EOL-in-iloa"><a href="#EOL-in-iloa" class="headerlink" title="EOL in iloa"></a>EOL in iloa</h3><p>Learning to use EOL with iloa takes a little work, their <a href="http://eol.org/api" target="_blank" rel="external">API docs</a> should help. Most commands take some kind of data identifier with a numeric value. Output is currently quite verbose, but informative.</p>
+<p>iloa command: <strong>eol</strong>, <strong>life</strong></p>
+<p>EOL Subcommands:</p>
+<ul>
+<li><strong>collection</strong>, <strong>collect</strong>, <strong>col</strong> returns all metadata about a particular collection and the items it contains indexed by EOL</li>
+<li><strong>entry</strong>, <strong>en</strong> gives access to a single hierarchy indexed by EOL and its internal relationships</li>
+<li><strong>hierarchy</strong>, <strong>hier</strong>, <strong>hi</strong> given a hierarchy identifier, this method returns metadata about the hierarchy and lists the root taxa</li>
+<li><strong>info</strong>, <strong>i</strong> ping service status and lists the identifiers for all hierarchies supplied by content partners</li>
+<li><strong>metadata</strong>, <strong>meta</strong>, <strong>md</strong> returns all metadata about a particular data object (text, image or video) indexed by EOL</li>
+<li><strong>page</strong>, <strong>pg</strong> takes an EOL page identifier and returns the scientific name for that page, and optionally returns information about common names, media (text, images and videos), and references to the hierarchies which recognize the taxon described on the page</li>
+<li><strong>provider</strong>, <strong>pro</strong>, <strong>by</strong> get the EOL page IDs given a provider’s hierarchy_id and the provider’s own unique identifier</li>
+<li><strong>search</strong>, <strong>match</strong>, <strong>query</strong>, <strong>se</strong> given a value for a specific element (e.g. scientific name=Homo sapiens), returns a paginated list of the EOL pages containing the search term</li>
+</ul>
+<p>Not implemented:</p>
+<ul>
+<li><strong>hierarchy_entries_descendants</strong> Couldn’t find any IDs that gave descendant data</li>
+</ul>
+<h2 id="Frequently-or-Never-Asked-Questions"><a href="#Frequently-or-Never-Asked-Questions" class="headerlink" title="Frequently (or Never) Asked Questions"></a>Frequently (or Never) Asked Questions</h2><h3 id="What-is-noon"><a href="#What-is-noon" class="headerlink" title="What is noon?"></a>What is noon?</h3><p><a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a>, or ‘nother ordinary object notation, is a human-readable data format created by <a href="https://github.com/monsterkodi" target="_blank" rel="external">monsterkodi</a>. Despite noon being very new, I decided to use it for leximaven’s configuration file because it is incredibly terse, even more so than <a href="http://hjson.org" target="_blank" rel="external">hjson</a> and <a href="https://github.com/bevry/cson" target="_blank" rel="external">cson</a>. This is me supporting a young project that I would like to see get wider recognition. It also makes it dead simple to load and save cson, json, plist, and yaml.</p>
+<h3 id="What-do-you-mean-by-gaining-knowledge"><a href="#What-do-you-mean-by-gaining-knowledge" class="headerlink" title="What do you mean by gaining knowledge?"></a>What do you mean by gaining knowledge?</h3><p>Though this tool may be limited in some ways, it is not biased. Knowledge comes in many forms. I encourage you to seek other knowledge outside of this tool. There is no ultimate authority.</p>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
+<li><a href="https://github.com/drawnepicenter/iloa/wiki#new-apis" target="_blank" rel="external">Extensible</a></li>
+<li>Configuration file in your home directory called <code>.iloa.noon</code></li>
+<li>Access configuration settings by passing commands, setting flags, or just editing the configuration file manually</li>
+<li>Sensible command line defaults and aliases</li>
+<li>XML parsing and building with <a href="https://github.com/Leonidas-from-XIV/node-xml2js" target="_blank" rel="external">xml2js</a></li>
+<li>In-memory caching and other neat features handled by <a href="https://github.com/Schibsted-Tech-Polska/good-guy-http" target="_blank" rel="external">good-guy-http</a>, which is based on <a href="https://github.com/request/request" target="_blank" rel="external">request</a></li>
+<li>Save data to <a href="https://github.com/bevry/cson" target="_blank" rel="external">CSON</a>, JSON, <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a>, Plist, XML, and YAML</li>
+<li>Instant Answers and bang redirects from <a href="https://duckduckgo.com" target="_blank" rel="external">DuckDuckGo</a></li>
+<li>Most API functions from <a href="http://eol.org" target="_blank" rel="external">Encyclopedia of Life</a></li>
+<li>Alerts, Almanac, Astronomy, Conditions, Forecast, Geolookup, Hourly, Tide, and Webcams from <a href="http://www.wunderground.com" target="_blank" rel="external">Weather Underground</a></li>
+<li>Summaries and Full Articles from <a href="http://www.wikipedia.org" target="_blank" rel="external">Wikipedia</a></li>
+<li>Computations from <a href="http://www.wolframalpha.com" target="_blank" rel="external">Wolfram|Alpha</a></li>
+<li>Automatic rate-limiting for Weather Underground &amp; Wolfram|Alpha</li>
+</ul>
+<h2 id="New-APIs"><a href="#New-APIs" class="headerlink" title="New APIs"></a>New APIs</h2><p>Adding new APIs to iloa is pretty straightforward. Look at the docs for <a href="https://github.com/yargs/yargs" target="_blank" rel="external">yargs</a> to understand the module format. Wikipedia has the simplest API, so it’s a good example of how to implement a new module.</p>
+<ul>
+<li><a href="https://github.com/drawnepicenter/iloa/blob/master/src/commands/wikipedia.js" target="_blank" rel="external">wp.js</a></li>
+</ul>
+<p>Each module registers a command with yargs. The command string defines the command and arguments. The builder object defines our options. The handler function contains our command logic.</p>
+<p>After configuration checks and theme loading, we assemble the URL from the parsed arguments, <code>argv</code>. <code>good-guy-http</code> fetches the JSON response. For each piece of data that is printed in the console, the same data is added to the <code>tofile</code> object. If <code>--out</code> is specified, this object is passed to <code>tools.outFile</code> which is then encoded and saved. Finally, if <code>--save</code> is specified, options are saved to configuration.</p>
+<h2 id="Overlap"><a href="#Overlap" class="headerlink" title="Overlap"></a>Overlap</h2><p>There is some overlapping functionality internally between iloa commands and externally between <a href="https://github.com/drawnepicenter/leximaven" target="_blank" rel="external">leximaven</a> &amp; iloa.</p>
+<ul>
+<li><p>DuckDuckGo Instant Answers often return Wikipedia articles.</p>
+</li>
+<li><p>Wolfram|Alpha can perform many of the same functions that <a href="https://github.com/drawnepicenter/leximaven" target="_blank" rel="external">leximaven</a> can, such as definitions, related words, acronyms, anagrams, pattern matching, and rhymes.</p>
+</li>
+</ul>
+<h2 id="Weather-Underground"><a href="#Weather-Underground" class="headerlink" title="Weather Underground"></a>Weather Underground</h2><p>iloa command: <strong>weather</strong>, <strong>wunder</strong>, <strong>wu</strong></p>
+<p>More info about weather than you could ever want! See the <a href="https://www.wunderground.com/weather/api/d/docs" target="_blank" rel="external">API docs</a> for detailed info.</p>
+<ul>
+<li>Control what data you get with the –features | -e flag. If you’re limited to 10 requests a minute, do <code>iloa weather -e alerts,almanac,astronomy,conditions,forecast10day,geolookup,hourly10day,tide,webcams KTPF</code> as one request!</li>
+<li>For more about why Weather Underground’s <strong>BestForecast</strong> is often superior to <a href="http://www.weather.gov/" target="_blank" rel="external">National Weather Service</a> data, see <a href="https://www.wunderground.com/about/data" target="_blank" rel="external">Weather Underground’s About our data</a>.</li>
+<li>Much of the data is provided by <a href="https://www.wunderground.com/weatherstation/" target="_blank" rel="external">Personal Weather Stations</a>.</li>
+<li>A list of <a href="https://www.world-airport-codes.com/" target="_blank" rel="external">Airport Codes</a> is useful for some features</li>
+<li><a href="http://www.nws.noaa.gov/os/vtec/pdfs/VTEC_explanation6.pdf" target="_blank" rel="external">VTEC Info</a>, <a href="http://www.wunderground.com/severe.asp" target="_blank" rel="external">US Severe Weather Map</a> &amp; <a href="http://www.wunderground.com/severe/europe.html" target="_blank" rel="external">Euro Severe Weather Map</a> for Wunderground alerts</li>
+</ul>
+<p>Implemented features:</p>
+<ul>
+<li><strong>Alerts</strong></li>
+<li><strong>Almanac</strong></li>
+<li><strong>Astronomy</strong></li>
+<li><strong>Current Conditions</strong></li>
+<li><strong>Forecast</strong></li>
+<li><strong>Forecast 10-day</strong></li>
+<li><strong>Geolookup</strong></li>
+<li><strong>Hourly forecast</strong></li>
+<li><strong>Hourly 10-day</strong></li>
+<li><strong>Tide</strong></li>
+<li><strong>Webcams</strong></li>
+</ul>
+<p>Not implemented:</p>
+<ul>
+<li><strong>Current Hurricane</strong></li>
+<li><strong>History</strong></li>
+<li><strong>Planner</strong></li>
+<li><strong>Radar/Satellite</strong></li>
+<li><strong>Yesterday</strong></li>
+</ul>
+<p>API Limits:</p>
+<ul>
+<li>500/day</li>
+<li>10/minute</li>
+</ul>
+<h2 id="Wikipedia"><a href="#Wikipedia" class="headerlink" title="Wikipedia"></a>Wikipedia</h2><p>iloa command: <strong>wikipedia</strong>, <strong>wiki</strong>, <strong>wp</strong></p>
+<p>A quick-and-dirty way to get just the article summary (flag -i/–intro) or the full article in MediaWiki markup. You could then pipe the MediaWiki markup into something like <a href="https://github.com/jgm/pandoc" target="_blank" rel="external">pandoc</a>. See the <a href="https://www.mediawiki.org/wiki/API:Main_page" target="_blank" rel="external">API docs</a> for more info.</p>
+<h2 id="Wolfram-Alpha"><a href="#Wolfram-Alpha" class="headerlink" title="Wolfram|Alpha"></a>Wolfram|Alpha</h2><p>iloa command: <strong>wolfram</strong>, <strong>wolf</strong>, <strong>wa</strong></p>
+<p>W|A is a computational knowledge engine written in the Wolfram language which is written in Wolfram’s Mathematica language. This makes it possible to search complex scientific concepts in free-form natural language. Example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iloa wolf &apos;doppler shift&apos;</div></pre></td></tr></table></figure>
+<p>…returns the formula for calculating the change in pitch based on the formula:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f_o/f_s = c/(c+v_s)</div></pre></td></tr></table></figure>
+<p>…where f_o/f_s (frequency reduction factor), c is the speed of sound (340.3 m/s) and v_s is the speed of source away from the observer (10 m/s). The results include an image file link for the rendered LaTeX equation and an audio clip of the calculation on a sine wave.</p>
+<p>API Limit:</p>
+<ul>
+<li>2000/month, caching results not allowed.</li>
+</ul>
 
   </div>
 </article>

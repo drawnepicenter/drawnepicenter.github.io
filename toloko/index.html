@@ -14,7 +14,7 @@ IntroductionToloko is a text translation tool for the command line that supports
 <meta property="og:site_name" content="drawn|epic|enter">
 <meta property="og:description" content="tolokoToloko is Sesotho for interpreter.
 IntroductionToloko is a text translation tool for the command line that supports dozens of source and target languages. It requires a terminal emulator that su">
-<meta property="og:updated_time" content="2017-01-09T05:34:17.555Z">
+<meta property="og:updated_time" content="2017-01-23T06:56:12.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="toloko">
 <meta name="twitter:description" content="tolokoToloko is Sesotho for interpreter.
@@ -144,6 +144,122 @@ toloko yx ls
 <h2 id="Gratitude"><a href="#Gratitude" class="headerlink" title="Gratitude"></a>Gratitude</h2><p>Many thanks to all contributors to the gems used in this project! And thanks to the creators and maintainers of the APIs that this tool consumes. Glosbe, Hablaa and Yandex are awesome!</p>
 <p>Powered by <a href="http://hablaa.com/" target="_blank" rel="external">Hablaa</a></p>
 <p>Powered by <a href="http://translate.yandex.com" target="_blank" rel="external">Yandex.Translate</a></p>
+<h3 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h3><ul>
+<li><a href="https://github.com/drawnepicenter/toloko/blob/master/README.md#toloko" target="_blank" rel="external">Project Status</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/blob/master/README.md#introduction" target="_blank" rel="external">Introduction</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/blob/master/README.md#installation" target="_blank" rel="external">Installation</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/blob/master/README.md#usage" target="_blank" rel="external">Usage</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/blob/master/README.md#resources" target="_blank" rel="external">Resources</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/blob/master/README.md#gratitude" target="_blank" rel="external">Gratitude</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/blob/master/README.md#extras" target="_blank" rel="external">Extras</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#completion" target="_blank" rel="external">Completion</a><ul>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#bash-instructions" target="_blank" rel="external">Bash instructions</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#zsh-instructions" target="_blank" rel="external">Zsh instructions</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#configuration" target="_blank" rel="external">Configuration</a><ul>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#examples" target="_blank" rel="external">Examples</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#saving-flags" target="_blank" rel="external">Saving flags</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#editing" target="_blank" rel="external">Editing</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#engine" target="_blank" rel="external">Engine</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#frequently-or-never-asked-questions" target="_blank" rel="external">Frequently (or Never) Asked Questions</a><ul>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#what-is-noon" target="_blank" rel="external">What is noon?</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#features" target="_blank" rel="external">Features</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#formats" target="_blank" rel="external">Formats</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#glosbe" target="_blank" rel="external">Glosbe</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#hablaa" target="_blank" rel="external">Hablaa</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#new-apis" target="_blank" rel="external">New APIs</a></li>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#yandex" target="_blank" rel="external">Yandex</a></li>
+</ul>
+<h3 id="Completion"><a href="#Completion" class="headerlink" title="Completion"></a>Completion</h3><p>iloa command: <strong>completion</strong>, <strong>comp</strong></p>
+<h4 id="Bash-instructions"><a href="#Bash-instructions" class="headerlink" title="Bash instructions"></a>Bash instructions</h4><p>Run <code>toloko comp &gt;&gt; ~/.bashrc</code>, then <code>source ~/.bashrc</code> to enable shell completion for toloko commands and options.</p>
+<h4 id="Zsh-instructions"><a href="#Zsh-instructions" class="headerlink" title="Zsh instructions"></a>Zsh instructions</h4><p>To Zsh read your bash script, add to <code>~/.zshrc</code>:<br><code>autoload bashcompinit</code><br><code>bashcompinit</code></p>
+<p>Now run <code>toloko comp &gt;&gt; ~/.zshrc</code> and <code>source ~/.zshrc</code>.</p>
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>Toloko can get and set values in the configuration file once it’s been initialized. Toloko uses the <a href="https://github.com/deoxxa/dotty" target="_blank" rel="external">dotty</a> library to allow dot notation for nested values. See the <a href="https://github.com/drawnepicenter/toloko/wiki#frequently-or-never-asked-questions" target="_blank" rel="external">FAQ</a> for why I chose <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> for the configuration file format.</p>
+<p>Toloko command: config</p>
+<p>Toloko subcommands:</p>
+<ul>
+<li><strong>init</strong>, <strong>i</strong> - Creates configuration file in home directory (~/.iloa.noon)</li>
+<li><strong>get</strong>, <strong>g</strong> - Gets a value for a given key. Accepts dot notation for nested values.</li>
+<li><strong>set</strong>, <strong>s</strong> - Sets a given key to a given value. Accepts dot notation for nested values.</li>
+</ul>
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p>For globals like <code>verbose</code> you can just do <code>toloko config set verbose true</code>. For nested properties, use dot notation like so:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ toloko config get glosbe.translate.author</div><div class="line">Option glosbe.translate.author is true.</div><div class="line"></div><div class="line">$ toloko config set glosbe.translate.author true</div><div class="line">Set option glosbe.translate.author to true.</div></pre></td></tr></table></figure>
+<h4 id="Saving-flags"><a href="#Saving-flags" class="headerlink" title="Saving flags"></a>Saving flags</h4><p>By default, the <strong>merge</strong> option is set to <em>true</em>, so CLI flags will be merged with the configuration from file. If you pass -s|–save with this, the config file will be overwritten with the current flags. If <strong>merge</strong> is set to <em>false</em>, the config file will always be used and –save won’t work. To restore all defaults run <code>toloko config init --force</code>.</p>
+<h4 id="Editing"><a href="#Editing" class="headerlink" title="Editing"></a>Editing</h4><p>Refer to the <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> syntax guide. When editing the configuration file manually, please remember that empty strings are denoted by two pipes: || and 2 or more spaces separate keys from values.</p>
+<h3 id="Engine"><a href="#Engine" class="headerlink" title="Engine"></a>Engine</h3><ul>
+<li><a href="https://github.com/chalk/chalk" target="_blank" rel="external">chalk</a>, <a href="https://github.com/sindresorhus/ora" target="_blank" rel="external">ora</a>, and <a href="https://github.com/nexdrew/yargonaut" target="_blank" rel="external">yargonaut</a> are used to style the terminal output.</li>
+<li><a href="https://github.com/moment/moment" target="_blank" rel="external">moment</a> manipulates timestamps for rate limiting.</li>
+<li><a href="https://github.com/Schibsted-Tech-Polska/good-guy-http" target="_blank" rel="external">good-guy-http</a> gets and caches HTTP requests.</li>
+<li><a href="https://github.com/yargs/yargs" target="_blank" rel="external">yargs</a> is used for creating the CLI.</li>
+<li><a href="https://github.com/Leonidas-from-XIV/node-xml2js" target="_blank" rel="external">xml2js</a> is used for XML format, and <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> is used for all other formats.</li>
+</ul>
+<h3 id="Frequently-or-Never-Asked-Questions"><a href="#Frequently-or-Never-Asked-Questions" class="headerlink" title="Frequently (or Never) Asked Questions"></a>Frequently (or Never) Asked Questions</h3><h4 id="What-is-noon"><a href="#What-is-noon" class="headerlink" title="What is noon?"></a>What is noon?</h4><p><a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a>, or ‘nother ordinary object notation, is a human-readable data format created by <a href="https://github.com/monsterkodi" target="_blank" rel="external">monsterkodi</a>. Despite noon being very new, I decided to use it for Leximaven’s configuration file because it is incredibly terse, even more so than <a href="http://hjson.org" target="_blank" rel="external">hjson</a> and <a href="https://github.com/bevry/cson" target="_blank" rel="external">cson</a>. This is me supporting a young project that I would like to see get wider recognition. It also makes it dead simple to load and save cson, json, plist, and yaml.</p>
+<h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul>
+<li><a href="https://github.com/drawnepicenter/toloko/wiki#new-apis" target="_blank" rel="external">Extensible</a></li>
+<li>Configuration file in your home directory called <code>.toloko.noon</code></li>
+<li>Access configuration settings by passing commands, setting flags, or just editing the configuration file manually</li>
+<li>Sensible command line defaults and aliases</li>
+<li>XML parsing and building with <a href="https://github.com/Leonidas-from-XIV/node-xml2js" target="_blank" rel="external">xml2js</a></li>
+<li><a href="https://github.com/Schibsted-Tech-Polska/good-guy-http" target="_blank" rel="external">good-guy-http</a> client with in-memory caching and other neat features. Under the hood is <a href="https://github.com/request/request" target="_blank" rel="external">request</a>.</li>
+<li>Save data to <a href="https://github.com/bevry/cson" target="_blank" rel="external">CSON</a>, JSON, <a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a>, Plist, XML, and YAML</li>
+<li>Translations and examples from <a href="https://glosbe.com" target="_blank" rel="external">Glosbe</a></li>
+<li>Translations from <a href="http://hablaa.com" target="_blank" rel="external">Hablaa</a></li>
+<li>Translations and language detection from <a href="https://www.yandex.com" target="_blank" rel="external">Yandex</a></li>
+</ul>
+<h3 id="Formats"><a href="#Formats" class="headerlink" title="Formats"></a>Formats</h3><p>Toloko supports the following file formats:</p>
+<ul>
+<li><a href="https://github.com/monsterkodi/noon" target="_blank" rel="external">noon</a> - Whitespace-sensitive terse data format created by <a href="https://github.com/monsterkodi" target="_blank" rel="external">@monsterkodi</a>, here used for the configuration and theme systems. See <a href="https://github.com/drawnepicenter/toloko/wiki/FAQ" target="_blank" rel="external">FAQ</a>.</li>
+<li>Plain JSON</li>
+<li>Plain XML</li>
+<li><a href="http://hjson.org/" target="_blank" rel="external">CSON</a> - JSON for Coffeescript objects</li>
+<li><a href="https://en.wikipedia.org/wiki/Property_list" target="_blank" rel="external">Plist</a> - OSX/iOS data format</li>
+<li><a href="http://yaml.org/" target="_blank" rel="external">YAML</a> - Human Readable data format</li>
+</ul>
+<h3 id="Glosbe"><a href="#Glosbe" class="headerlink" title="Glosbe"></a>Glosbe</h3><p>From glosbe.com:</p>
+<p>Glosbe provides free dictionaries for almost every existing language and <a href="https://glosbe.com/tmem/" target="_blank" rel="external">translation memory</a> with over a billion sentences included.</p>
+<ul>
+<li>Almost every live language.</li>
+<li>Huge dictionary database.</li>
+<li>Millions of examples.</li>
+<li>Unique phrases and expressions.</li>
+<li><a href="https://glosbe.com/all-dictionaries" target="_blank" rel="external">All Dictionaries</a></li>
+<li><a href="https://glosbe.com/all-languages" target="_blank" rel="external">All Languages</a></li>
+<li><a href="https://glosbe.com/transliteration" target="_blank" rel="external">Transliteration</a></li>
+</ul>
+<p>Toloko command: <strong>glosbe</strong>, <strong>gl</strong></p>
+<p>Glosbe subcommands:</p>
+<ul>
+<li><strong>example</strong>, <strong>ex</strong> - Provides translation examples containing a word</li>
+<li><strong>translate</strong>, <strong>trans</strong>, <strong>tr</strong> - Translates a word</li>
+</ul>
+<h3 id="Hablaa"><a href="#Hablaa" class="headerlink" title="Hablaa"></a>Hablaa</h3><p>From hablaa.com:</p>
+<p>Hablaa provides free translations from and into more than 160 languages.</p>
+<p>Toloko command: <strong>hablaa</strong>, <strong>ha</strong></p>
+<p>Hablaa subcommands:</p>
+<ul>
+<li><strong>list</strong>, <strong>langs</strong>, <strong>ls</strong> - Lists supported languages</li>
+<li><strong>translate</strong>, <strong>trans</strong>, <strong>tr</strong> - Translates a word</li>
+</ul>
+<h3 id="New-APIs"><a href="#New-APIs" class="headerlink" title="New APIs"></a>New APIs</h3><p>Adding new APIs to iloa is pretty straightforward. Look at the docs for <a href="https://github.com/yargs/yargs" target="_blank" rel="external">yargs</a> to understand the module format. As an example, here’s Hablaa’s translate module.</p>
+<ul>
+<li><a href="https://github.com/drawnepicenter/toloko/blob/master/src/commands/hablaa/translate.js" target="_blank" rel="external">hablaa/translate.js</a></li>
+</ul>
+<p>Each module registers a command with yargs. The command string defines the command and arguments. The builder object defines our options. The handler function contains our command logic.</p>
+<p>After configuration checks and theme loading, we assemble the URL from the parsed arguments, <code>argv</code>. <code>good-guy-http</code> fetches the JSON response. For each piece of data that is printed in the console, the same data is added to the <code>tofile</code> object. If <code>--out</code> is specified, this object is passed to <code>tools.outFile</code> which is then encoded and saved. Finally, if <code>--save</code> is specified, options are saved to configuration.</p>
+<h3 id="Yandex"><a href="#Yandex" class="headerlink" title="Yandex"></a>Yandex</h3><p>The Yandex.Translate API is a universal text translation tool that uses <a href="https://yandex.com/company/technologies/translation/" target="_blank" rel="external">machine translation technology</a> developed at Yandex. It allows developers to integrate machine translation into their applications, services, and sites. Translation is currently available for more than 80 languages.</p>
+<p>Developers of small translation projects, which do not exceed 10,000,000 characters a month (and no more than 1,000,000 in 24 hours), can use the Yandex.Translate API for free.</p>
+<p>Toloko command: <strong>yandex</strong>, <strong>yx</strong></p>
+<p>Yandex subcommands:</p>
+<ul>
+<li><strong>detect</strong>, <strong>dt</strong> - Detects the language being used</li>
+<li><strong>list</strong>, <strong>langs</strong>, <strong>ls</strong> - Lists the supported languages</li>
+<li><strong>translate</strong>, <strong>tr</strong> - Translates a word</li>
+</ul>
 
   </div>
 </article>
